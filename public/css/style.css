@@ -1,0 +1,33 @@
+.glass-card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ambient-glow {
+    box-shadow: 0 0 40px rgba(0, 245, 212, 0.1);
+}
+
+.animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HERO BACKGROUND ANIMATION */
+@keyframes pulse-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.hero-bg {
+    background: linear-gradient(-45deg, #0b0f10, #191c1e, #101415, #00201a);
+    background-size: 400% 400%;
+    animation: pulse-bg 15s ease infinite;
+}

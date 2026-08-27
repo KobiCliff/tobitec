@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Obioma - Full Stack & Web3 Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Syne:wght@100..900&display=swap" rel="stylesheet">
+    <script src="public/js/tailwind-config.js"></script>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TOP NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 bg-surface-container/60 dark:bg-surface-container/60 backdrop-blur-xl border-b border-white/10 shadow-sm transition-all duration-300 ease-in-out">
+        <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+            <a class="font-headline-md text-headline-md font-bold text-primary-container" href="index.html">
+                <span class="text-on-surface">tobi</span><span class="text-primary-container">tec</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-300 font-body-md text-body-md" href="index.html">Home</a>
+                <a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 font-body-md text-body-md transition-colors duration-300" href="projects.html">Projects</a>
+                <a class="text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-300 font-body-md text-body-md" href="about.html">About</a>
+                <a class="text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-300 font-body-md text-body-md" href="contact.html">Contact</a>
+            </div>
+            <a class="bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-caps text-label-caps px-6 py-3 rounded-full transition-colors duration-300 hidden md:block uppercase" href="contact.html">Hire Me</a>
+            <!-- MOBILE MENU -->
+            <button class="md:hidden text-on-surface" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div class="hidden md:hidden flex-col bg-surface-container/75 backdrop-blur-xl border-t border-white/10" id="mobileMenu">
+            <a class="block px-gutter py-4  text-primary-container font-bold border-b border-white/5" href="index.html">Home</a>
+            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="projects.html">Projects</a>
+            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="about.html">About</a>
+            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="contact.html">Contact</a>
+            <a class="block mx-gutter my-4 px-6 py-3 bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps rounded-full uppercase text-center" href="contact.html">Hire Me</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-32 pb-section-gap min-h-screen">
+        <!-- HEADER SECTION -->
+        <header class="max-w-container-max mx-auto px-gutter mb-16 text-center">
+            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Selected Works</h1>
+            <p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">A collection of projects spanning full-stack development, Web3 experiments, game dev, and community-driven builds</p>
+        </header>
+        <!-- FILTERS -->
+        <section class="max-w-container-max mx-auto px-gutter mb-16 flex flex-wrap justify-center gap-4" id="portfolio-filters">
+            <button class="filter-btn active px-6 py-2 rounded-full border border-white/10 text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all glass-panel hover:border-primary-container/50" data-filter="all">All Projects</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white/10 text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all glass-panel hover:border-primary-container/50" data-filter="web">Web Dev</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white/10 text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all glass-panel hover:border-primary-container/50" data-filter="web3">Web3</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white/10 text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all glass-panel hover:border-primary-container/50" data-filter="game">Game Dev</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white/10 text-on-surface font-label-caps text-label-caps uppercase tracking-widest transition-all glass-panel hover:border-primary-container/50" data-filter="community">Community</button>
+        </section>
+         <!-- PROJECT GRID -->
+        <section class="max-w-container-max mx-auto px-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- LA BELLE EPOQUE -->
+                 <article class="portfolio-item glass-panel rounded-xl overflow-hidden glass-card-hover flex flex-col h-full" data-category="web">
+                    <div class="relative h-64 overflow-hidden bg-gradient-to-br from-surface-container-highest to-surface-dim flex items-center justify-center">
+                        <p class="font-display-lg text-on-surface/10 text-[64px] font-extrabold select-none">LBE</p>
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-surface-dim/80 backdrop-blur-md text-on-surface px-3 py-1 rounded-full font-label-caps text-label-caps border border-white/10">Web Dev</span>
+                        </div>
+                        <div class="absolute bottom-4 right-4">
+                            <span class="bg-primary-container text-on-primary-fixed-variant px-3 py-1 rounded-full font-label-caps text-label-caps ">Live</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[24px] leading-tight">La Belle Époque</h3>
+                        <p class="font-body-md text-body-md text-secondary mb-6 flex-grow">A luxury restaurant website built with Next.js and Tailwind CSS. Clean, fast and built to make reservations feel as polished as the dining room.</p>
+                        <a class="inline-flex items-center text-primary-container font-label-caps text-label-caps uppercase tracking-widest hover:text-primary-fixed transition-colors group mt-auto" href="https://belle-epoque-eta.vercel.app" target="_blank" rel="noopener">View Project <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+                    </div>
+                 </article>
+                 <!-- ******************************************************************** -->
+                <!-- PORTFOLIO CONCEPT -->
+                 <article class="portfolio-item glass-panel rounded-xl overflow-hidden glass-card-hover flex flex-col h-full" data-category="web">
+                    <div class="relative h-64 overflow-hidden bg-gradient-to-br from-surface-container-highest to-surface-dim flex items-center justify-center">
+                        <p class="font-display-lg text-on-surface/10 text-[64px] font-extrabold select-none">PFL</p>
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-surface-dim/80 backdrop-blur-md text-on-surface px-3 py-1 rounded-full font-label-caps text-label-caps border border-white/10">Web Dev</span>
+                        </div>
+                        <div class="absolute bottom-4 right-4">
+                            <span class="bg-primary-container text-on-primary-fixed-variant px-3 py-1 rounded-full font-label-caps text-label-caps ">Live</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[24px] leading-tight">Multi-Page Portfolio Concept</h3>
+                        <p class="font-body-md text-body-md text-secondary mb-6 flex-grow">A data/design/AI-themed portfolio build exploring hash-based routing, a canvas node-network background, and a live-filterable project grid</p>
+                        <a class="inline-flex items-center text-primary-container font-label-caps text-label-caps uppercase tracking-widest hover:text-primary-fixed transition-colors group mt-auto" href="https://cvtemp-a.vercel.app" target="_blank" rel="noopener">View Project <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+                    </div>
+                 </article>
+                <!-- LUMORA -->
+                 <article class="portfolio-item glass-panel rounded-xl overflow-hidden glass-card-hover flex flex-col h-full" data-category="web">
+                    <div class="relative h-64 overflow-hidden bg-gradient-to-br from-surface-container-highest to-surface-dim flex items-center justify-center">
+                        <p class="font-display-lg text-on-surface/10 text-[64px] font-extrabold select-none">LUM</p>
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-surface-dim/80 backdrop-blur-md text-on-surface px-3 py-1 rounded-full font-label-caps text-label-caps border border-white/10">SaaS</span>
+                        </div>
+                        <div class="absolute bottom-4 right-4">
+                            <span class="bg-white/10 text-secondary px-3 py-1 rounded-full font-label-caps text-label-caps border border-white/10">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[24px] leading-tight">Lumora</h3>
+                        <p class="font-body-md text-body-md text-secondary mb-6 flex-grow">A Next.js SaaS dashboard concept with Paystack payments and a waitlist flow. Early-stage scalfolding. Still a work in progress</p>
+                        <a class="inline-flex items-center text-primary-container font-label-caps text-label-caps uppercase tracking-widest hover:text-primary-fixed transition-colors group mt-auto" href="https://github.com/KobiCliff/lumora" target="_blank" rel="noopener">View Project <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+                    </div>
+                 </article>
+                <!-- RECKONING -->
+                 <article class="portfolio-item glass-panel rounded-xl overflow-hidden glass-card-hover flex flex-col h-full" data-category="web">
+                    <div class="relative h-64 overflow-hidden bg-gradient-to-br from-surface-container-highest to-surface-dim flex items-center justify-center">
+                        <p class="font-display-lg text-on-surface/10 text-[64px] font-extrabold select-none">REC</p>
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-surface-dim/80 backdrop-blur-md text-on-surface px-3 py-1 rounded-full font-label-caps text-label-caps border border-white/10">Mobile App</span>
+                        </div>
+                        <div class="absolute bottom-4 right-4">
+                            <span class="bg-white/10 text-secondary px-3 py-1 rounded-full font-label-caps text-label-caps border border-white/10">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[24px] leading-tight">Reckoning</h3>
+                        <p class="font-body-md text-body-md text-secondary mb-6 flex-grow">A money-accountability app for the Nigerian market - Node.js and supabase backend with an Expo React Native frontend. Still a work in progress</p>
+                        <a class="inline-flex items-center text-primary-container font-label-caps text-label-caps uppercase tracking-widest hover:text-primary-fixed transition-colors group mt-auto" href="javascript:void(0)">View Project<span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer class="w-full bg-surface-dim dark:bg-surface-dim border-t border-white/5">
+        <div class="max-w-container-max mx-auto px-gutter py-section-gap flex flex-col md:flex-row justify-between items-center gap-base">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-0">
+                <span class="text-on-surface">tobi</span><span class="text-primary-container">tec</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="mailto:tobiasmichael2205@gmail.com">Email</a>
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="https://x.com/kcloudy5" target="_blank" rel="noopener">X</a>
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="https://github.com/KobiCliff" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="text-secondary-fixed-dim font-body-md text-body-md mt-4 md:mt-0 text-center md:text-right opacity-80">
+                © 2026 tobitec. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="public/js/nav.js" defer></script>
+    <script src="public/js/projects.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Obioma - Full Stack & Web3 Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link  href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Syne:wght@100..900&display=swap" rel="stylesheet">
+    <script src="public/js/tailwind-config.js"></script>
+</head>
+
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-fixed">
+    <!-- TOP NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 bg-surface-container/60 dark:bg-surface-container/60 backdrop-blur-xl border-b border-white/10 shadow-sm transition-all duration-300 ease-in-out">
+        <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+            <a class="font-headline-md text-headline-md font-bold text-primary-container" href="index.html">
+                <span class="text-on-surface">tobi</span><span class="text-primary-container">tec</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 font-body-md text-body-md transition-colors duration-300" href="index.html">Home</a>
+                <a class="text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-300 font-body-md text-body-md" href="projects.html">Projects</a>
+                <a class="text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-300 font-body-md text-body-md" href="about.html">About</a>
+                <a class="text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-300 font-body-md text-body-md" href="contact.html">Contact</a>
+            </div>
+            <a class="bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-caps text-label-caps px-6 py-3 rounded-full transition-colors duration-300 hidden md:block uppercase" href="contact.html">Hire Me</a>
+            <!-- MOBILE MENU -->
+            <button class="md:hidden text-on-surface" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div class="hidden md:hidden flex-col bg-surface-container/75 backdrop-blur-xl border-t border-white/10" id="mobileMenu">
+            <a class="block px-gutter py-4  text-primary-container font-bold border-b border-white/5" href="index.html">Home</a>
+            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="projects.html">Projects</a>
+            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="about.html">About</a>
+            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="contact.html">Contact</a>
+            <a class="block mx-gutter my-4 px-6 py-3 bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps rounded-full uppercase text-center" href="contact.html">Hire Me</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+         <section class="relative min-h-screen flex items-center justify-center pt-20 hero-bg overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container/5 rounded-full blur-[100px]"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-fixed/5 rounded-full blur-[100px]"></div>
+            </div>
+            <div class="max-w-container-max mx-auto px-gutter relative z-10 text-center animate-fade-in-up is-visible">
+                <p class="font-label-caps  text-label-caps text-primary-container mb-6 tracking-widest uppercase">Full Stack &amp; Web3 Developer</p>
+                <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8 max-w-4xl mx-auto text-on-surface leading-tight">Turning <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-primary-fixed">Ideas</span> Into Real, Working Things.</h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-10">Full-stack development, Web3 experiments, and community building - I like taking an idea from concept to something people actually use.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 ">
+                    <a class="bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-caps text-label-caps px-8 py-4 rounded-full transition-all duration-300 uppercase w-full sm:w-auto shadow-[0_0_20px_rgba(38,254,220,0.2)]" href="projects.html">View Projects</a>
+                    <a class="bg-transparent border border-white/20 hover:border-white/40 text-on-surface font-label-caps text-label-caps px-8 py-4 rounded-full transition-colors duration-300 uppercase w-full sm:w-auto" href="contact.html">Contact Me</a>
+                </div>
+            </div>
+         </section>
+         <!-- OVERVIEW SECTION -->
+          <section class="py-section-gap-mobile md:py-section-gap max-w-container-max mx-auto px-gutter">
+            <div class="grid md:grid-cols-2 gap-12 items-center animate-fade-in-up">
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden glass-card ambient-glow relative z-10">
+                        <img class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" src="public/img/profile.png" alt="Tobias Obioma">
+                    </div>
+                    <!-- DECORATIVE OFFSET IFRAME -->
+                     <div class="absolute -inset-4 border border-white/5 rounded-2xl z-0 transform translate-x-4 translate-y-4"></div>
+                </div>
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg mb-6" >Code, Community &amp; Creativity.</h2>
+                    <p class="font-body-md text-body-md text-secondary mb-6 leading-relaxed"> I'm Tobias - a full-stack developer and blockchain enthusiast with a background that spans tech, gaming, crypto, and community building. From an internship earning a Senior Software Programmer title, to moderating global Web3 communities and testing AAA games, to now leading social media and community for a game studio.</p>
+                    <p class="font-body-md text-body-md text-secondary mb-8 leading-relaxed">Right now I'm diving into Web3 development, Unreal Engine game dev, and crafting content in the crypto space. I like building things people actually use and love.</p>
+                    <a class="inline-flex items-center gap-2 text-primary-container font-label-caps text-label-caps uppercase hover:opacity-80 transition-opacity" href="about.html">Read Full Bio <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                </div>
+            </div>
+          </section>
+    </main>
+    
+    <!-- FOOTER  -->
+    <footer class="w-full bg-surface-dim dark:bg-surface-dim border-t border-white/5">
+        <div class="max-w-container-max mx-auto px-gutter py-section-gap flex flex-col md:flex-row justify-between items-center gap-base">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-0">
+                <span class="text-on-surface">tobi</span><span class="text-primary-container">tec</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="mailto:tobiasmichael2205@gmail.com">Email</a>
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="https://x.com/kcloudy5" target="_blank" rel="noopener">X</a>
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="https://github.com/KobiCliff" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="text-secondary-fixed-dim font-body-md text-body-md mt-4 md:mt-0 text-center md:text-right opacity-80">
+                © 2026 tobitec. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="public/js/nav.js" defer></script>
+    <script src="public/js/home.js" defer></script>
+</body>
+</html>
