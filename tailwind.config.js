@@ -3,7 +3,7 @@ module.exports = {
     content: ["./*.html", "./public/**/*.js"],
     darkMode: "class",
     theme: {
-        extemd: {
+        extend: {
             colors: {
                 "on-surface": "#e0e3e5",
                 "primary-container": "#00f5d4",

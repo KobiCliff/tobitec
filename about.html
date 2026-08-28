@@ -11,7 +11,8 @@
     <link  href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Syne:wght@100..900&display=swap" rel="stylesheet">
     <script src="public/js/tailwind-config.js"></script>
 </head>
-<body>
+
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-fixed min-h-screen flex flex-col pt-20">
     <!-- TOP NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 bg-surface-container/60 dark:bg-surface-container/60 backdrop-blur-xl border-b border-white/10 shadow-sm transition-all duration-300 ease-in-out">
         <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
@@ -31,28 +32,208 @@
             </button>
         </div>
         <div class="hidden md:hidden flex-col bg-surface-container/75 backdrop-blur-xl border-t border-white/10" id="mobileMenu">
-            <a class="block px-gutter py-4  text-primary-container font-bold border-b border-white/5" href="index.html">Home</a>
+            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="index.html">Home</a>
             <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="projects.html">Projects</a>
-            <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="about.html">About</a>
+            <a class="block px-gutter py-4  text-primary-container font-bold border-b border-white/5" href="about.html">About</a>
             <a class="block px-gutter py-4 text-secondary hover:text-primary-container transition-colors border-b border-white/5" href="contact.html">Contact</a>
             <a class="block mx-gutter my-4 px-6 py-3 bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps rounded-full uppercase text-center" href="contact.html">Hire Me</a>
         </div>
     </nav>
+
+    <main class="flex-grow">
+        <!-- HERO BIO -->
+         <section class="max-w-container-max mx-auto px-gutter py-section-gap relative overflow-hidden">
+            <div class="ambient-glow absolute bg-primary-container/5 blur-[100px] rounded-full w-[500px] h-[500px] top-0 left-[-200px] pointer-events-none"></div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="col-span-12 md:col-span-7 z-10">
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 text-on-surface">Building with Code, Growing with Community.</h1>
+                    <p class="font-body-lg text-body-lg text-secondary mb-8 max-w-2xl">I'm Tobias (Tobitec) — a full-stack developer and blockchain enthusiast with a diverse background in tech, gaming, crypto, writing and community building. I bring a mix of technical depth and human connection to every project I touch.</p>
+                    <div class="flex gap-4">
+                    <a class="bg-primary-container text-surface-dim px-8 py-3 rounded-lg font-label-caps text-label-caps hover:bg-primary-fixed transition-colors inline-flex items-center gap-2" href="#experience">View Experience <span class="material-symbols-outlined" style="font-size: 16px;">arrow_downward</span></a>
+                    </div>
+                </div>
+            <div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0">
+                <div class="glass-card rounded-xl p-2 relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
+                    <img class="w-full aspect-[4/5] object-cover rounded-lg filter grayscale hover:grayscale-0 transition-all duration-500" src="public/img/profile.png" alt="Tobias Obioma">
+                </div>
+                    <div class="absolute -bottom-6 -right-6 glass-card px-6 py-4 rounded-xl z-20">
+                        <p class="font-headline-md text-headline-md text-primary-container ">5+</p>
+                        <p class="font-label-caps text-label-caps text-secondary">Years in Tech</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!-- VALUES/PHILOSOPHY -->
+          <section class="max-w-container-max mx-auto px-gutter py-section-gap">
+            <h2 class="font-headline-lg text-headline-lg mb-16 text-center text-on-surface">How I Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="glass-card p-8 rounded-xl hover:translate-y-2 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-primary-container text-4xl mb-6">code</span>
+                    <h3 class="font-headline-md text-headline-md mb-4 text-on-surface text-xl">Full-Stack Thinking</h3>
+                    <p class="font-body-md text-body-md text-secondary">Comfortable across the whole stack: React and Next.js on the frontend, Node.js and daatabases underneath, with Web3 tooling and layered in where it's needed.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl hover:translate-y-2 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-primary-container text-4xl mb-6">groups</span>
+                    <h3 class="font-headline-md text-headline-md mb-4 text-on-surface text-xl">Community First</h3>
+                    <p class="font-body-md text-body-md text-secondary">Years of moderating and growing gaming and Web3 communities taught me that good products are built with people, not just for them.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl hover:translate-y-2 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-primary-container text-4xl mb-6">rocket_launch</span>
+                    <h3 class="font-headline-md text-headline-md mb-4 text-on-surface text-xl">Always Shipping</h3>
+                    <p class="font-body-md text-body-md text-secondary">Always learning, always building. I'd rather ship something real and iterate than polish something that never leaves the sandbox.</p>
+                </div>
+            </div>
+          </section>
+
+          <!-- EXPERIENCE TIMELINE -->
+           <section class="max-w-container-max mx-auto px-gutter py-section-gap relative overflow-hidden" id="experience">
+            <div class="ambient-glow absolute bg-primary-container/5 blur-[100px] rounded-full w-[600px] h-[600px] bottom-0 right-[-300px] pointer-events-none"></div>
+            <h2 class="font-headline-lg text-headline-lg mb-16 text-on-surface">Career Journey</h2>
+            <div class="relative border border-white/10 ml-4 md:ml-0 md:border-none">
+                <!-- TIMELINE ITEM 1 -->
+                 <div class="mb-12 relative pl-8 md:pl-0 md:grid md:grid-cols-12 md:gap-gutter group">
+                    <div class="absolute left-[5px] top-1 w-3 h-3 bg-primary-container rounded-full md:hidden"></div>
+                    <div class="md:col-span-3 md:text-right hidden md:block mt-1">
+                        <p class="font-label-caps text-label-caps text-primary-container mb-1">2024 - present</p>
+                        <p class="font-body-md text-body-md text-secondary">Remote</p>
+                    </div>
+                    <div class="hidden md:flex md:col-span-1 justify-center relative ">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-48px] w-px bg-white/10 group-last:bottom-0"></div>
+                        <div class="w-4 h-4 bg-surface-dim border-2 border-primary-container rounded-full mt-1 z-10"></div>
+                    </div>
+                    <div class="md:col-span-8 glass-card p-8 rounded-xl">
+                        <div class="md:hidden mb-4">
+                            <p class="font-label-caps text-label-caps text-primary-container">2024 - Present</p>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-2 text-on-surface text-2xl">Community Manager &amp; Social Media Lead</h3>
+                        <h4 class="font-body-lg text-body-lg text-secondary mb-4">Raven Illusion Studio</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Grow and engage the gaming community across Discord, X, Instagram &amp; Tiktok. Pitch viral content, manage events, and help launch titles.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-surface-variant text-on-surface px-3 py-1 rounded-full font-label-caps text-label-caps text-[-10x]">Community</span>
+                            <span class="bg-surface-variant text-on-surface px-3 py-1 rounded-full font-label-caps text-label-caps text-[-10x]">Social Media</span>
+                            <span class="bg-surface-variant text-on-surface px-3 py-1 rounded-full font-label-caps text-label-caps text-[-10x]">Content</span>
+                        </div>
+                    </div>
+                 </div>
+                <!-- TIMELINE ITEM 2 -->
+                 <div class="mb-12 relative pl-8 md:pl-0 md:grid md:grid-cols-12 md:gap-gutter group">
+                    <div class="absolute left-[5px] top-1 w-3 h-3 bg-primary-container rounded-full md:hidden"></div>
+                    <div class="md:col-span-3 md:text-right hidden md:block mt-1">
+                        <p class="font-label-caps text-label-caps text-primary-container mb-1">2023 - 2024</p>
+                        <p class="font-body-md text-body-md text-secondary">Remote</p>
+                    </div>
+                    <div class="hidden md:flex md:col-span-1 justify-center relative ">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-48px] w-px bg-white/10 group-last:bottom-0"></div>
+                        <div class="w-4 h-4 bg-surface-dim border-2 border-primary-container rounded-full mt-1 z-10"></div>
+                    </div>
+                    <div class="md:col-span-8 glass-card p-8 rounded-xl">
+                        <div class="md:hidden mb-4">
+                            <p class="font-label-caps text-label-caps text-primary-container">2023 - 2024</p>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-2 text-on-surface text-2xl">Game Tester &amp; Community Moderator</h3>
+                        <h4 class="font-body-lg text-body-lg text-secondary mb-4">Hammer Games Studio &amp; Republik.gg</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Tested gameplay mechanics, reported bugs, moderated Republik.gg social media app, wrote patch notes, and shaped user experience for Web3 social platforms.</p>
+                    </div>
+                 </div>
+                <!-- TIMELINE ITEM 3 -->
+                 <div class="mb-12 relative pl-8 md:pl-0 md:grid md:grid-cols-12 md:gap-gutter group">
+                    <div class="absolute left-[5px] top-1 w-3 h-3 bg-primary-container rounded-full md:hidden"></div>
+                    <div class="md:col-span-3 md:text-right hidden md:block mt-1">
+                        <p class="font-label-caps text-label-caps text-primary-container mb-1">2022 - 2023</p>
+                        <p class="font-body-md text-body-md text-secondary">Internship</p>
+                    </div>
+                    <div class="hidden md:flex md:col-span-1 justify-center relative ">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-48px] w-px bg-white/10 group-last:bottom-0"></div>
+                        <div class="w-4 h-4 bg-surface-dim border-2 border-primary-container rounded-full mt-1 z-10"></div>
+                    </div>
+                    <div class="md:col-span-8 glass-card p-8 rounded-xl">
+                        <div class="md:hidden mb-4">
+                            <p class="font-label-caps text-label-caps text-primary-container">2022 - 2023</p>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-2 text-on-surface text-2xl">Senior Software Programmer (Certified)</h3>
+                        <h4 class="font-body-lg text-body-lg text-secondary mb-4">De-Golojan Technologies • Internship</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Full-stack development training. Built real client projects using React, Node.js, and MongoDB. Graduated with a Senior Programmer certification</p>
+                    </div>
+                 </div>
+                <!-- TIMELINE ITEM 4 -->
+                 <div class="mb-12 relative pl-8 md:pl-0 md:grid md:grid-cols-12 md:gap-gutter group">
+                    <div class="absolute left-[5px] top-1 w-3 h-3 bg-primary-container rounded-full md:hidden"></div>
+                    <div class="md:col-span-3 md:text-right hidden md:block mt-1">
+                        <p class="font-label-caps text-label-caps text-primary-container mb-1">2022 - present</p>
+                        <p class="font-body-md text-body-md text-secondary">Freelance</p>
+                    </div>
+                    <div class="hidden md:flex md:col-span-1 justify-center relative ">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-48px] w-px bg-white/10 group-last:bottom-0"></div>
+                        <div class="w-4 h-4 bg-surface-dim border-2 border-primary-container rounded-full mt-1 z-10"></div>
+                    </div>
+                    <div class="md:col-span-8 glass-card p-8 rounded-xl">
+                        <div class="md:hidden mb-4">
+                            <p class="font-label-caps text-label-caps text-primary-container">2022 - Present</p>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-2 text-on-surface text-2xl">Independent Developer &amp; Crypto Writer</h3>
+                        <h4 class="font-body-lg text-body-lg text-secondary mb-4">Freelance</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Built personal projects, Discord bots, and landing pages. Wrote in-depth threads and articles about Web3, DeFi, NFTs, and blockchain gaming.</p>
+                    </div>
+                 </div>
+            </div>
+           </section>
+
+           <!-- EDUCATION & CERTIFICATION -->
+            <section class="bg-surface-container-low py-section-gap border-y border-white/5">
+                <div class="max-w-container-max mx-auto px-gutter ">
+                    <h2 class="font-headline-lg text-headline-lg mb-12 text-on-surface">Credentials &amp; Current Focus</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- CERTIFICATIONS -->
+                         <div>
+                            <h3 class="font-headline-md text-headline-md mb-6 text-secondary text-xl border-b border-white/10 pb-4">Certifications</h3>
+                            <div class="space-y-4">
+                                <div class="glass-card p-4 rounded-lg flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-body-md text-body-md text-on-surface font-semibold">Senior Software Programmer</h4>
+                                        <p class="font-label-caps text-label-caps text-secondary mt-1">De-Golojan Technologies, 2023</p>
+                                    </div>
+                                    <span class="material-symbols-outlined text-primary-container">workspace_premium</span>
+                                </div>
+                            </div>
+                         </div>
+                         <!-- Currently Learning -->
+                         <div>
+                            <h3 class="font-headline-md text-headline-md mb-6 text-secondary text-xl border-b border-white/10 pb-4">Currently Learning</h3>
+                            <div class="space-y-4">
+                                <div class="glass-card p-4 rounded-lg flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-body-md text-body-md text-on-surface font-semibold">Web3 Development</h4>
+                                        <p class="font-label-caps text-label-caps text-secondary mt-1">Solidity, Rust &amp; smart contracts</p>
+                                    </div>
+                                    <span class="material-symbols-outlined text-primary-container">token</span>
+                                    <div>
+                                        <h4 class="font-body-md text-body-md text-on-surface font-semibold">Unreal Engine Game Dev</h4>
+                                        <p class="font-label-caps text-label-caps text-secondary mt-1">Going deeper into game systems</p>
+                                    </div>
+                                    <span class="material-symbols-outlined text-primary-container">sports_esports</span>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+    </main>
     
     <!-- FOOTER  -->
     <footer class="w-full bg-surface-dim dark:bg-surface-dim border-t border-white/5">
-        <div class="max-w-container-max mx-auto px-gutter py-section-gap flex flex-col md:flex-row justify-between items-center gap-base">
-            <div class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-0">
+        <div class="max-w-container-max mx-auto px-gutter py-10 flex flex-col md:flex-row justify-between items-center gap-base">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface">
                 <span class="text-on-surface">tobi</span><span class="text-primary-container">tec</span>
             </div>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="mailto:tobiasmichael2205@gmail.com">Email</a>
-                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="https://x.com/kcloudy5" target="_blank" rel="noopener">X</a>
-                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="https://github.com/KobiCliff" target="_blank" rel="noopener">GitHub</a>
-            </div>
-            <div class="text-secondary-fixed-dim font-body-md text-body-md mt-4 md:mt-0 text-center md:text-right opacity-80">
+            <div class="text-secondary-fixed-dim opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md">
                 © 2026 tobitec. All rights reserved.
             </div>
+            <nav class="flex flex-wrap justify-center gap-6">
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors font-body-md text-body-md" href="mailto:tobiasmichael2205@gmail.com">Email</a>
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors font-body-md text-body-md" href="https://x.com/kcloudy5" target="_blank" rel="noopener">X</a>
+                <a class="text-secondary-fixed-dim hover:text-primary-container transition-colors font-body-md text-body-md" href="https://github.com/KobiCliff" target="_blank" rel="noopener">GitHub</a>
+            </nav>
         </div>
     </footer>
     <script src="public/js/nav.js" defer></script>
