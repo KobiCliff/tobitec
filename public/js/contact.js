@@ -6,7 +6,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const formData = new FormData(form);
 
     try {
-        const response = await fetch('https://api.web3forms.com.submit', {
+        const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData
         });
@@ -20,10 +20,10 @@ document.getElementById('contactForm').addEventListener('submit', async function
                 success.classList.remove('opacity-0', 'pointer-events-none');
             }, 300);
         } else {
-            alert('Something went wrong. Please try again oremail me directly.')
+            alert('Something went wrong. Please try again or email me directly.')
         };
     } catch (error) {
-        alert('Network error. Please try again oremail me directly.');
+        alert('Network error. Please try again or email me directly.');
     }
 });
 
