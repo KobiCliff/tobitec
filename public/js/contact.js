@@ -10,7 +10,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
             method: 'POST',
             body: formData
         });
-        const result = await.response.json();
+        const result = await response.json();
 
         if (result.success) {
             // Simple animation sequence
